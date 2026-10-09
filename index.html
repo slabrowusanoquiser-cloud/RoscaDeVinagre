@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosquinhas de Vinagre — Receita + Ciência</title>
+  <meta name="description" content="Site interativo sobre rosquinhas de vinagre: receita, processo, química, digestão e viagem do amido." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-dot">◌</span> Rosquinhas de Vinagre</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="navMenu">
+      <a href="#receita">Receita</a>
+      <a href="#processo">Processo</a>
+      <a href="#quimica">Química</a>
+      <a href="#corpo">Do prato ao corpo</a>
+      <a href="#molecula">Molécula</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">RECEITA CASEIRA + CIÊNCIA</span>
+        <h1>Rosquinhas de <em>Vinagre</em></h1>
+        <p>Da tigela ao corpo: uma receita simples que vira uma experiência de culinária, química e biologia.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#receita">Ver receita</a>
+          <a class="btn ghost" href="#video">Assistir preparo</a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>40–60</strong><span>minutos</span></div>
+          <div><strong>6</strong><span>ingredientes-base</span></div>
+          <div><strong>∞</strong><span>rosquinhas 😄</span></div>
+        </div>
+      </div>
+      <div class="hero-art reveal delay-1">
+        <div class="blob"></div>
+        <img src="assets/prontas.png" alt="Rosquinhas de vinagre prontas" />
+        <div class="floating-card">Crocantes por fora<br><b>macias por dentro</b></div>
+      </div>
+    </section>
+
+    <section class="section intro-strip">
+      <div>
+        <span class="eyebrow">SOBRE A RECEITA</span>
+        <h2>Um biscoito caseiro com bastante coisa acontecendo</h2>
+      </div>
+      <p>Os ovos, o açúcar, o óleo, o vinagre, o fermento e a farinha formam a massa. Depois ela é modelada em rosquinhas e frita até dourar. No caminho, dá para observar mudanças de textura, aquecimento, formação de gases e digestão dos carboidratos.</p>
+    </section>
+
+    <section class="section" id="receita">
+      <div class="section-head reveal">
+        <span class="eyebrow">RECEITA</span>
+        <h2>Ingredientes na medida</h2>
+        <p>Use os botões para ajustar a quantidade.</p>
+      </div>
+
+      <div class="recipe-grid">
+        <div class="card ingredients-card reveal">
+          <div class="portion-control">
+            <button class="portion" data-mult="0.5">½ receita</button>
+            <button class="portion active" data-mult="1">1 receita</button>
+            <button class="portion" data-mult="2">2 receitas</button>
+          </div>
+          <ul id="ingredientList" class="ingredients"></ul>
+          <div class="note"><b>Observação:</b> a farinha deve entrar aos poucos. Use somente o necessário para a massa ficar firme o bastante para enrolar, mas ainda macia.</div>
+        </div>
+
+        <div class="card photo-card reveal delay-1">
+          <img src="assets/interior.png" alt="Interior de uma rosquinha de vinagre" />
+          <div class="photo-caption">
+            <span>Resultado</span>
+            <b>Douradinha por fora, macia por dentro.</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="processo">
+      <div class="section-head reveal">
+        <span class="eyebrow">MODO DE PREPARO</span>
+        <h2>Do começo ao fim</h2>
+        <p>Clique nas etapas para acompanhar o processo.</p>
+      </div>
+
+      <div class="stepper reveal" id="stepper">
+        <div class="step-tabs" id="stepTabs"></div>
+        <div class="step-panel">
+          <div class="step-image-wrap"><img id="stepImage" src="assets/mistura.png" alt="Etapa do preparo" /></div>
+          <div class="step-copy">
+            <span id="stepNumber" class="step-number">01</span>
+            <h3 id="stepTitle">Mistura inicial dos ingredientes</h3>
+            <p id="stepText"></p>
+            <div class="step-nav">
+              <button id="prevStep" class="icon-btn">← Anterior</button>
+              <button id="nextStep" class="icon-btn">Próxima →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wide-image reveal">
+        <img src="assets/processo.png" alt="Colagem com o passo a passo das rosquinhas de vinagre" />
+      </div>
+    </section>
+
+    <section class="section" id="quimica">
+      <div class="section-head reveal">
+        <span class="eyebrow">A QUÍMICA DOS INGREDIENTES</span>
+        <h2>Clique para descobrir o papel de cada ingrediente</h2>
+      </div>
+      <div class="chem-grid" id="chemGrid"></div>
+      <div class="science-callout reveal">
+        <div class="icon">⚗</div>
+        <div><b>Durante a fritura</b><p>O calor muda a textura da massa, parte da água evapora e a superfície fica dourada e mais firme.</p></div>
+      </div>
+    </section>
+
+    <section class="section split-showcase" id="corpo">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">BIOLOGIA</span>
+        <h2>Do prato ao corpo</h2>
+        <p>Depois de comer a rosquinha, o alimento passa pela boca, esôfago, estômago e intestino delgado. Os nutrientes absorvidos chegam ao sangue e são distribuídos até as células.</p>
+        <button class="btn primary" id="openBodyModal">Ver infográfico ampliado</button>
+      </div>
+      <div class="showcase-image reveal delay-1">
+        <img src="assets/do_prato_ao_corpo.png" alt="Infográfico do prato ao corpo" />
+      </div>
+    </section>
+
+    <section class="section molecule" id="molecula">
+      <div class="section-head reveal">
+        <span class="eyebrow">VIAGEM DE UMA MOLÉCULA</span>
+        <h2>A jornada do amido da farinha</h2>
+        <p>Passe pelas etapas para acompanhar a transformação até a produção de energia.</p>
+      </div>
+      <div class="molecule-path reveal" id="moleculePath"></div>
+      <div class="molecule-detail card reveal" id="moleculeDetail"></div>
+      <div class="wide-image reveal">
+        <img src="assets/viagem_molecula.png" alt="Infográfico da viagem do amido" />
+      </div>
+    </section>
+
+    <section class="section comic" id="quadrinhos">
+      <div class="section-head reveal">
+        <span class="eyebrow">CIÊNCIA EM ARTE</span>
+        <h2>Uma historinha em quadrinhos</h2>
+      </div>
+      <div class="wide-image reveal">
+        <img src="assets/quadrinhos.png" alt="História em quadrinhos sobre rosquinhas de vinagre" />
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="section-head reveal">
+        <span class="eyebrow">VÍDEO</span>
+        <h2>Veja o preparo acontecendo</h2>
+      </div>
+      <div class="video-card reveal">
+        <video controls preload="metadata" poster="assets/modelagem.png">
+          <source src="assets/preparo.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="section-head reveal">
+        <span class="eyebrow">DESAFIO RÁPIDO</span>
+        <h2>Você prestou atenção?</h2>
+        <p>Responda 5 perguntas e veja sua pontuação.</p>
+      </div>
+      <div class="quiz-card card reveal" id="quizCard">
+        <div class="quiz-progress"><div id="quizBar"></div></div>
+        <span id="quizCount">Pergunta 1 de 5</span>
+        <h3 id="quizQuestion"></h3>
+        <div id="quizOptions" class="quiz-options"></div>
+        <p id="quizFeedback" class="quiz-feedback"></p>
+        <button id="quizNext" class="btn primary" disabled>Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Rosquinhas de Vinagre</b><span>Receita + Química + Biologia</span></div>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <dialog id="imageModal">
+    <button id="closeModal" class="modal-close">×</button>
+    <img src="assets/do_prato_ao_corpo.png" alt="Infográfico ampliado" />
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
